@@ -1,5 +1,6 @@
 # README
 
+### Version
 ```
 ruby -v : ruby 2.3.3p222
 rails --version : Rails 5.1.1
@@ -28,7 +29,7 @@ Things you may want to cover:
 
 * ...
 
-
+### Commands 
 ```
 bundle install
 rails server
