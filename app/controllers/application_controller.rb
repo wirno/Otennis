@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     end
 
       	devise_parameter_sanitizer.permit(:account_update) do |user_params|
-    	user_params.permit(:nom, :prenom, :birthday, :cp, :ville, :tennislevel, :anneetennis, :email, :password)
+    	user_params.permit(:nom, :prenom, :birthday, :cp, :ville, :tennislevel, :anneetennis, :avatar, :email, :password)
     end
 
   end
