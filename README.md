@@ -32,5 +32,6 @@ Things you may want to cover:
 ### Commands 
 ```
 bundle install
+rake db:drop db:create db:migrate
 rails server
 ```
