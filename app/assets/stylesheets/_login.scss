@@ -1,45 +1,101 @@
-/*html,body {
+html,body {
   height: 100%;
+
 }
 
+.login{
+    height: 100%;
+    width: auto;
+    background-image:url("images/../tennis.jpg");
+    background-size: 100%;
+    padding-top:20%;
+
+    h2{
+      margin-top:0;
+    }
+
+}
+
+
+
 .form-wrapper {
-  position: fixed;
+ // position: fixed;
   left: 0;
   right: 0;
   z-index: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  
+
+
+
   .form-container {
-    background-color: white;
+      padding-top:5%;
+      background-color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.6);
+
+
     h2 {
       color: #F6A623;
-      font-size: 16px;
+      font-size: 3em;
       text-align: center;
     }
     .fields-container {
       margin: 0 auto;
-      width: 100%;
+      width: 10%;
       .field-login {
-        width: 300px;
+        width: 50px;
         height: 50px;
       }
     }
   }
   &:before {
     content: "";
-    position: fixed;
+   // position: fixed;
     left: 0;
     right: 0;
     z-index: -1;
 
     display: block;
-    background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
+    background-image:url("images/../banner-3.jpg");
     width: 100%;
 
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
   }
-}*/
+
+  input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    background:#fd9232;
+    border: none;
+}
+
+input[type=submit]:hover {
+    -webkit-appearance: button;
+    cursor: pointer;
+    background:white;
+    border: none;
+    color:#fd9232;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    padding-left: 0px;
+    -webkit-appearance:none 
+
+
+    }
+
+
+
+
+form#new_user.new_user{
+  margin-left: -110px;
+}
+}
+

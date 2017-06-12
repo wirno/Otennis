@@ -1,13 +1,48 @@
-<div><%= @toto %></div>
 <%= render 'partial/navbar' %>
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <div id="divone">
+               <h1>Bienvenu!</h1>
+               <h3>Votre partenaire de jeu n'attend que vous</h3>
+               <p>
+                  <%# <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+                  <%= link_to 'CONNEXION', new_user_session_path, class: 'btn btn-primary btn-lg' %>
+                  <a href="" class='btn btn-primary btn-lg'> DECOUVRIR</a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
 
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Register to get started.</p>
-      <p>
-        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
-        <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary btn-lg' %>
-      </p>
-    </div>
-  </div>
+
+
+
+   <div class="row">
+
+<div class="col-6">
+
+   <div class="presentation trapese">
+
+   
+   <p class="introduction">
+         <h3 class="titleorange">Qu'est-ce que O'tennis ?</h3>
+  Avec O’Tennis, trouvez un partenaire de tennis de même niveau que vous ! Nous utilisons un algorithme <br> mathématique sophistiqué pour dénicher votre homologue du tennis autour de vous.<br> En l’espace de 5 minutes chrono planifiez votre rencontre, trouvez un terrain et réservez le. Jeu, set et match ! 
+   </p>
+   
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+<%= render 'partial/footer' %>
+
+
+
+
+

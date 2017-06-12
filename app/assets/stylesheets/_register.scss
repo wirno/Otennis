@@ -1,7 +1,35 @@
+
+.register{
+    height: 100%;
+    width: auto;
+    background-image:url("images/../tennis-joueurs.jpg");
+    background-size: 100%;
+    padding-top:20%;
+
+    h2{
+      margin-top:0;
+    }
+
+}
+
+
+
 .register-wrapper {
+
+	padding-top:3%;
+      background-color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.6);
+      padding-bottom:3%;
+
+
+
   .page-content {
     width: 910px;
     h2 {
+    	color: #F6A623;
+      font-size: 3em;
+      text-align: center;
 
     }
   }

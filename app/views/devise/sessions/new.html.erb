@@ -1,6 +1,14 @@
 <%= render 'partial/navbar' %>
 
-<div class="form-wrapper">
+
+<div class="login">
+
+<div class="row">
+  
+  <div class="col-md-6 col-md-offset-3">
+
+
+    <div class="form-wrapper">
   <div class="form-container">
     <h2>Connexion</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -8,14 +16,39 @@
           <div class="field-login">
             <%= f.email_field :email, autofocus: true %>
           </div>
+          <br>
           <div class="field-login">
             <%= f.password_field :password, autocomplete: "off" %>
           </div>
+          <br>
           <button class="actions">
-            <%= f.submit "Log in" %>
+            <%= f.submit "Connexion" %>
           </button>
         </div>
     <% end %>
     <%= render "devise/shared/links" %>
   </div>
+
+
 </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<%= render 'partial/footer' %>

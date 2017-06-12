@@ -1,6 +1,21 @@
 <%= render "partial/navbar" %>
 
-<div class="register-wrapper">
+
+
+
+
+
+
+<div class="register">
+
+
+
+<div class="row">
+
+
+
+
+<div class="register-wrapper col-md-8 col-md-offset-2 ">
   <div class="page-content">
     <h2>Inscription</h2>
 
@@ -26,7 +41,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+
+
+
+        <div class="col-md-4">
+            <div class="form-group">
+
+              <%= f.email_field :ville, class: 'form-control', placeholder: 'Ville' %>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
             <div class="form-group">
               <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Mot de passe' %>
               <% if @validatable %>
@@ -34,15 +60,37 @@
               <% end %>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="form-group">
               <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmation du mot de passe' %>
             </div>
           </div>
         </div>
 
-        <%= f.submit "Sign up", class: 'btn btn-primary' %>
+        <%= f.submit "Inscription", class: 'btn btn-primary btn-lg center-block' %>
     <% end %>
   </div>
 </div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%= render "devise/shared/links" %>
+<%= render "partial/footer" %>

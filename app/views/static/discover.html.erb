@@ -1,0 +1,98 @@
+<%= render 'partial/navbar' %>
+
+
+
+
+<div class="discover">
+
+
+<div class="row">
+
+<h1> Une expérience facilité </h1>
+
+
+	<div class="col-md-8 col-md-offset-2">
+
+
+
+
+
+
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+         
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            
+
+
+            <div class="active item">
+                <%=image_tag("4450.png",:class => "img_discover")%>
+         		<div class="carousel-caption">
+                  <h3>1_ Montrer qui vous êtes</h3>
+                  <p>Renseignez votre niveau, votre emplacement, vos disponibilités et c'est parti</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="item">
+                <%=image_tag("people.png",:class => "img_discover")%>
+
+
+                <div class="carousel-caption">
+                  <h3>2_ Recherchez votre adversaire</h3>
+                  <p>Notre algorithme trouve des adversaire correspondant à votre
+                  niveau et votre géolocalisation. Enfin un moyen d'organiser facilement et efficacement votre partie</p>
+                </div>
+            </div>
+            <div class="item">
+                <%=image_tag("calendar.png",:class => "img_discover")%>
+                <div class="carousel-caption">
+                  <h3>3_ Planifiez votre rencontre</h3>
+                  <p>Avec la définition des disponibilités de votre futur partenaire, notre service vous permet de définir
+                  le meilleur créneau pour votre partie. Une fois que votre partenaire a validé la partie, trouvez le cours le
+                  plus proche de chez vous et reservez-le !</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+
+
+         <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol> 
+
+    </div>
+</div>
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+</div>
+
+<%= render 'partial/footer' %>
+
+
