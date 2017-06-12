@@ -1,5 +1,4 @@
 class StaticController < ApplicationController
-	def show
-    render params[:page]
+	def discover
   end
 end
