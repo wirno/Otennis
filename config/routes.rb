@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   	get 'indexer/reindex'
 
   	get 'matchmaking', to: 'users#matchmaking', as:'matchmaking'
+  	get 'profile', to: 'users#profile'
+	get 'profile/:id', to: 'users#show', as:'find_profile'
+
 end
