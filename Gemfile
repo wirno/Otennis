@@ -50,6 +50,8 @@ gem 'devise'
 
 gem 'mysql2'
 
+gem "algoliasearch-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
