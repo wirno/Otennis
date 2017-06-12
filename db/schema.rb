@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170608121927) do
     t.datetime "updated_at", null: false
     t.string "nom"
     t.string "prenom"
-    t.integer "age"
+    t.date "age"
     t.string "genre"
     t.string "cp"
     t.string "ville"

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
 	get 'indexer/index'
   	get 'indexer/reindex'
+
+  	get 'matchmaking', to: 'users#matchmaking', as:'matchmaking'
 end

@@ -1,0 +1,25 @@
+<%= render "partial/navbar" %>
+
+<h1>Users#matchmaking</h1>
+<p>Find me in app/views/users/matchmaking.html.erb</p>
+
+<div class="row">
+<% @users.each do |user| %>
+
+  <div class="col-md-4">
+  	<div class="thumbnail">
+  	<a href="#">
+    <% if user.avatar.present? %>
+    	<%= image_tag(user.avatar, size: '413x275', alt: 'Your upload jacket', style: "width:100%") %>
+  	<% else %>
+    	<%= image_tag('jacket-default', alt: 'Your upload jacket') %>
+    <% end %>
+        <div class="caption">
+          <p><%= user.nom %> <%= user.prenom %></p>
+          <p><%= user.genre %> - <%= user.ville %> - <%= user.cp %></p>
+        </div>
+      </a>
+    </div>
+  </div>
+<% end %>
+</div>

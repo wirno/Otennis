@@ -79,6 +79,8 @@ GEM
     ffi (1.9.18-x64-mingw32)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    httparty (0.15.5)
+      multi_xml (>= 0.5.2)
     httpclient (2.8.3)
     i18n (0.8.4)
     jbuilder (2.7.0)
@@ -100,6 +102,7 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     mysql2 (0.4.6)
     mysql2 (0.4.6-x64-mingw32)
     nio4r (2.1.0)
@@ -198,6 +201,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   carrierwave
   devise
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   mysql2
