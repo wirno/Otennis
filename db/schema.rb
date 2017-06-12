@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170608121927) do
     t.string "nom"
     t.string "prenom"
     t.integer "age"
+    t.string "genre"
     t.string "cp"
     t.string "ville"
     t.string "tennislevel"
