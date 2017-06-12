@@ -1,0 +1,18 @@
+<%= render 'partial/navbar' %>
+
+<div><%= @user.nom %></div>
+<div><%= @user.prenom %></div>
+<div><%= @user.age %></div>
+<div><%= @user.email %></div>
+<div><%= @user.cp %></div>
+<div><%= @user.ville %></div>
+<div><%= @user.tennislevel %></div>
+<div><%= @user.anneetennis %></div>
+<% if @user.avatar.present? %>
+	<%= image_tag(@user.avatar, size: '150x150', alt: 'Your upload jacket', style: "width:100%") %>
+<% else %>
+    <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket') %>
+<% end %>
+<%= link_to 'modifier profil', edit_user_registration_path %>
+
+

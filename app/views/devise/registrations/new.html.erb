@@ -35,23 +35,11 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-
               <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
             </div>
           </div>
         </div>
         <div class="row">
-
-
-
-        <div class="col-md-4">
-            <div class="form-group">
-
-              <%= f.email_field :ville, class: 'form-control', placeholder: 'Ville' %>
-            </div>
-          </div>
-
-
           <div class="col-md-4">
             <div class="form-group">
               <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Mot de passe' %>
@@ -65,9 +53,32 @@
               <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmation du mot de passe' %>
             </div>
           </div>
-        </div>
 
-        <%= f.submit "Inscription", class: 'btn btn-primary btn-lg center-block' %>
+          <div class="col-md-4">
+            <div class="form-group">
+              <%= f.date_field :age, class: 'form-control', placeholder: 'date de naissance' %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field-register">
+              <%= f.text_field :ville, class: 'form-control', placeholder: 'Ville' %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <%= f.text_field :cp, class: 'form-control', placeholder: 'code postal' %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <%= f.radio_button :genre, 'Homme', :checked => true %> <%= label :genre_homme, 'Homme' %>
+              <%= f.radio_button :genre, 'Femme' %> <%= label :genre_femme, 'Femme' %>
+            </div>
+          </div>
+        </div>
+        <%= f.submit "Sign up", class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>

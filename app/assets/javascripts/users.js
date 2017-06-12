@@ -1,3 +1,6 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+
 $(function() {  
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -11,9 +14,8 @@ $(function() {
   }
 
   $("#avatar-upload").change(function(){
-    console.log('tototo');
     $('#img_preview').removeClass('hidden');
     readURL(this);
 
   });
-});
+});s
