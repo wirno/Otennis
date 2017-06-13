@@ -1,0 +1,94 @@
+<%= render 'partial/navbar' %>
+
+<div class="search-wrapper">
+  <div class="container">
+    <div class="content">
+      <form>
+        <%= image_tag('search.png', alt: 'Edit Entry', class: 'search-icon') %>
+        <input type="text" class="search" placeholder="Rechercher par pseudo">
+      </form>
+    </div>
+  </div>
+</div>
+<div class="page-wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <form>
+        <h6 class="title">Où ?</h6>
+        <div class="sidebar-line"></div>
+        <li>
+          <span>Ville</span>
+          <input class="city" name="ville" value="" placeholder="Ville"/>
+        </li>
+        <li>
+          <span>Rayon</span>
+          <div id="slider-range"></div>
+        </li>
+        <h6 class="title">Caractéristiques</h6>
+        <div class="sidebar-line"></div>
+        <li>
+          <label for="male">Homme</label>
+          <input type="radio" name="male">
+          <label for="female">Femme</label>
+          <input type="radio" name="female">
+        </li>
+        <li>
+          <span>Age entre</span>
+          <div id="slider-age"></div>
+        </li>
+        <li>
+          <span>Niveau minimum</span>
+          <select>
+            <option>Débutant</option>
+            <option>40 - amateur</option>
+            <option>30/5 - amateur avancé</option>
+            <option>30/4 - intermédiaire</option>
+            <option>30/3 - intermédiaire</option>
+          </select>
+        </li>
+        <li>
+          <span>Notation</span>
+          <div id="slider-notation"></div>
+        </li>
+      </form>
+    </ul>
+  </div>
+  <div class="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <%= render 'partial/search-profile' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'partial/footer' %>

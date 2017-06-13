@@ -1,0 +1,169 @@
+.search-wrapper {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.231;
+  color: #0f0f0f;
+  -webkit-font-smoothing: antialiased;
+  height: 40px;
+  background: #EFEEEE;
+  img {
+    width: 35px;
+  }
+  input {
+  }
+}
+
+.page-wrapper {
+  background-color: #D8D8D8;
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &.toggled {
+      width: 250px;
+      @media(min-width: 768px) {
+        width: 250px;
+      }
+    }
+  }
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      text-indent: 20px;
+      line-height: 40px;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #999999;
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+          background: rgba(255, 255, 255, 0.2);
+        }
+        &:active, :focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    margin-left: 250px;
+    .search-profile {
+      background: white;
+      border: 0.5px solid #FD9232;
+      height: 160px;
+      img {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 50%;
+      }
+      label {
+        font-size: 11px;
+        font-family: "Source Sans Pro";
+        color: #000;
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        padding-top: 5px;
+      }
+      a {
+        font-family: "Source Sans Pro";
+        text-decoration: none;
+        padding: 15px;
+        background-color: #FD9232;
+        color: white;
+        font-size: 13px;
+      }
+      h1 {
+        color: #FD9232;
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      h2 {
+        color: #000;
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        font-size: 13px;
+        margin-top: 0;
+      }
+      span {
+        padding: 0;
+        margin: 0;
+        color: #9d9d9d;
+        font-size: 11px;
+        display: block;
+        font-weight: 300;
+        font-family: "Source Sans Pro";
+      }
+    }
+    &.toggled {
+      position: absolute;
+      margin-right: -250px;
+      @media(min-width: 768px) {
+        position: relative;
+        margin-right: 0;
+      }
+    }
+    @media(min-width: 768px) {
+      padding: 20px;
+      position: relative;
+    }
+  }
+  @media(min-width: 768px) {
+    padding-left: 0;
+  }
+  &.toggled {
+    padding-left: 250px;
+    @media(min-width: 768px) {
+      padding-left: 250px;
+    }
+  }
+}
+.stars {
+  .star {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+
+    -webkit-mask: url(star.svg) no-repeat 50% 50%;
+    mask: url(star.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+  .icon-yellow {
+    background: yellow;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

@@ -1,85 +1,80 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html,body {
-
-	a{
-		color:white;
-	}
+html, body {
+  overflow-x: hidden;
+  a {
+    color: white;
+  }
   height: 100%;
-
-  .container{
-  	margin-left:0;
-  	margin-right:0;
-
-
+  .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .container #divone{
-  	//background-image:url("images/../banner-3.jpg");
-  	padding:10px;
-    margin-left: 10%;  
-
-  	
+  .container #divone {
+    padding: 10px;
+    margin-left: 10%;
+    h1 {
+      color: white;
+    }
+  }
+  .container #divone h3 {
+    color: white;
   }
 
-.container #divone h3{ 
-	color: white;
-}
+  .jumbotron {
+    background-image: url("images/../banner-3.jpg");
+    height: 600px;
 
+  }
+  .presentation {
+    text-align: right;
+  }
 
-.jumbotron {
-	background-image:url("images/../banner-3.jpg");
-	height: 600px;
-
-}
-.presentation{
-	text-align:right;
-}
-
-.btn-group-lg>.btn, .btn-lg {
+  .btn-group-lg > .btn, .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
-    border:none;
-    background:#FD9232 ;
-    border-radius:initial;
+    border: none;
+    background: #FD9232;
+    border-radius: initial;
     //border-radius: 6px;
-}
-.btn-group-lg>.btn, .btn-lg:hover {
+  }
+  .btn-group-lg > .btn, .btn-lg:hover {
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
-    border:none;
-    background:white ;
-    color:#FD9232;
+    border: none;
+    background: white;
+    color: #FD9232;
     //border-radius: 6px;
-}
-.btn{
-	border:none;
-}
-.trapese {
-
-  width: 100%;
-  height: 370px;
-  background-color: white;
-  background-size: cover;
-  clip-path: polygon(100% 0%, 100% 100%, -15% 100%);
-  padding-right: 5%;
-  
-  h3{
-    color:#FD9232;
   }
-}
+  .btn {
+    border: none;
+  }
+  .trapese {
 
-.introduction{
-  padding-top: 10%;
+    width: 100%;
+    height: 370px;
+    background-color: white;
+    background-size: cover;
+    clip-path: polygon(100% 0%, 100% 100%, -15% 100%);
+    padding-right: 5%;
 
-}
+    h3 {
+      color: #FD9232;
+    }
+  }
 
-.navbar-default{
-  background:#FD9232;
-  border:none;
-}
+  .introduction {
+    padding-top: 10%;
+
+  }
+
+  .navbar-default {
+    background: #FD9232;
+    border: none;
+  }
 
 }
