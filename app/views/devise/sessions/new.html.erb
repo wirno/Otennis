@@ -1,54 +1,19 @@
 <%= render 'partial/navbar' %>
 
 
-<div class="login">
-
-<div class="row">
-  
-  <div class="col-md-6 col-md-offset-3">
-
-
-    <div class="form-wrapper">
+<div class="page-login-wrapper">
   <div class="form-container">
     <h2>Connexion</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="fields-container">
-          <div class="field-login">
-            <%= f.email_field :email, autofocus: true %>
-          </div>
-          <br>
-          <div class="field-login">
-            <%= f.password_field :password, autocomplete: "off" %>
-          </div>
-          <br>
-          <button class="actions">
-            <%= f.submit "Connexion" %>
-          </button>
-        </div>
+        <%= f.email_field :email, autofocus: true, class: 'login_field', placeholder: 'Email' %>
+        <%= f.password_field :password, autocomplete: 'off', class: 'login_field', placeholder: 'Mot de passe' %>
+        <%= f.submit 'Connexion', class: 'login-submit' %>
     <% end %>
-    <%= render "devise/shared/links" %>
-  </div>
-
-
-</div>
-
-
-
-
-
-
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: 'forgot' %><br/>
+      <% end -%>
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Vous n'avez pas de compte ? Inscrivez vous", new_registration_path(resource_name), class: 'sign_up'%><br/>
+      <% end -%>
   </div>
 </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<%= render 'partial/footer' %>

@@ -1,15 +1,5 @@
 <%= render 'partial/navbar' %>
 
-<div class="search-wrapper">
-  <div class="container">
-    <div class="content">
-      <form>
-        <%= image_tag('search.png', alt: 'Edit Entry', class: 'search-icon') %>
-        <input type="text" class="search" placeholder="Rechercher par pseudo">
-      </form>
-    </div>
-  </div>
-</div>
 <div class="page-wrapper">
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
@@ -17,27 +7,30 @@
         <h6 class="title">Où ?</h6>
         <div class="sidebar-line"></div>
         <li>
-          <span>Ville</span>
+          <label for="ville">Ville</label>
           <input class="city" name="ville" value="" placeholder="Ville"/>
         </li>
         <li>
-          <span>Rayon</span>
+          <label>Rayon</label>
           <div id="slider-range"></div>
         </li>
         <h6 class="title">Caractéristiques</h6>
         <div class="sidebar-line"></div>
         <li>
-          <label for="male">Homme</label>
+          <input type="text" class="search" placeholder="Rechercher par pseudo">
+        </li>
+        <li>
+          <label for="male" class="gender-label">Homme</label>
           <input type="radio" name="male">
-          <label for="female">Femme</label>
+          <label for="female" class="gender-label">Femme</label>
           <input type="radio" name="female">
         </li>
         <li>
-          <span>Age entre</span>
+          <label>Age entre</label>
           <div id="slider-age"></div>
         </li>
         <li>
-          <span>Niveau minimum</span>
+          <label>Niveau minimum</label>
           <select>
             <option>Débutant</option>
             <option>40 - amateur</option>
@@ -47,8 +40,17 @@
           </select>
         </li>
         <li>
-          <span>Notation</span>
-          <div id="slider-notation"></div>
+          <label>Notation</label>
+          <select>
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+        </li>
+        <li>
+          <button type="submit">Rechercher</button>
         </li>
       </form>
     </ul>
@@ -91,4 +93,3 @@
     </div>
   </div>
 </div>
-<%= render 'partial/footer' %>

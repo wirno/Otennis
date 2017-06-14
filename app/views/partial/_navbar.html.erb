@@ -11,14 +11,13 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to 'Profil', profile_path %></li>
-          <li><%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Découvrir", "/discover" %></li>
+          <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to 'Recherche', search_path %></li>
       </ul>
         <% else %>
           <li><%= link_to 'Connexion', new_user_session_path %></li>
           <li><%= link_to 'Inscription', new_user_registration_path %></li>
-
-          <li><%= link_to "Decouvrir", "/discover" %></li>
+          <li><%= link_to "Découvrir", "/discover" %></li>
         <% end %>
       </ul>
   </div>
