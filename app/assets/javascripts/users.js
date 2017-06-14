@@ -18,4 +18,4 @@ $(function() {
     readURL(this);
 
   });
-});s
+});
