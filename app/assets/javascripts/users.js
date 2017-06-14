@@ -12,9 +12,9 @@ $(function () {
             reader.readAsDataURL(input.files[0]);
         }
     }
-
     $("#avatar-upload").change(function () {
         $('#img_preview').removeClass('hidden');
         readURL(this);
     });
 });
+

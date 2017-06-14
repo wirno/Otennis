@@ -1,0 +1,56 @@
+<%= render "partial/navbar" %>
+
+<h1>Users#settings</h1>
+<p>Find me in app/views/users/settings.html.erb</p>
+
+<%= form_for(:filters, :url => matchmaking_parameters_path, :html => {:class => 'form'}) do |f| %>
+  	<div class="form-group">
+	    <%= f.label :ville %>
+	    <%= f.text_field :ville, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+	    <%= f.label :rayon %>
+	    <%= f.select :radius, [['10 KM','10'], ['20 KM','20'], ['30 KM','30']]%>
+	</div>
+
+	<div class="form-group">
+	    <%= f.label :genre %>
+	    <%= f.radio_button :sexe, 'Homme', :checked => true %> <%= label :sexe_homme, 'Homme' %>
+	    <%= f.radio_button :sexe, 'Femme' %> <%= label :sexe_femme, 'Femme' %>
+	</div>
+
+	<div class="form-group">
+	    <%= f.label :age_entre %>
+	    <%= f.text_field :age1, class: 'form-control' %>
+	    <%= f.label :et %>
+	    <%= f.text_field :age2, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+	    <%= f.label :niveau_de_tennis %>
+	    <%= f.select :niveau, ['', 'Novice', 'Debutant', 'Experimenté', 'expert', 'pro']%>
+	</div>
+
+    	<%= f.submit "rechercher", class: 'btn btn-primary' %>
+<% end %>
+<div class="row">
+<% @users.each do |user| %>
+
+  <div class="col-md-4">
+  	<div class="thumbnail">
+    <%= link_to find_profile_path(user) do %>
+    <% if user.avatar.present? %>
+    	<%= image_tag(user.avatar, alt: 'Your upload jacket', style: "width:100%") %>
+  	<% else %>
+    	<%= image_tag('jacket-default', alt: 'Your upload jacket') %>
+    <% end %>
+        <div class="caption">
+          <p><%= user.nom %> <%= user.prenom %></p>
+          <p><%= user.genre %> - <%= user.ville %> - <%= user.cp %></p>
+        </div>
+    <% end %>
+    </div>
+  </div>
+<% end %>
+</div>

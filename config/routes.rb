@@ -14,5 +14,9 @@ Rails.application.routes.draw do
   	get 'matchmaking', to: 'users#matchmaking', as:'matchmaking'
   	get 'profile', to: 'users#profile'
 	get 'profile/:id', to: 'users#show', as:'find_profile'
+	
+	get 'matchmaking/settings', to: 'users#settings'
+	post 'matchmaking/parameters', to: 'users#parameters'
+	get 'matchmaking/parameters', to: 'users#redirsettings'
 
 end
