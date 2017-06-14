@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 	root to: 'home#index'
 	get 'home', to:'home#index', as: 'home'
 
+	get '/discover' => 'static#discover'
+  get '/search' => 'static#search'
+
+
 	get 'indexer/index'
   	get 'indexer/reindex'
 

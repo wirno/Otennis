@@ -1,8 +1,72 @@
 .register-wrapper {
-  .page-content {
-    width: 910px;
-    h2 {
-
+  background: url(tennis-joueurs.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+    .page-content {
+      width: 910px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.6);
+      padding: 25px;
+      h2 {
+        font-size: 35px;
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        text-align: center;
+        color: orange;
+      }
+      .avatar-container {
+        .avatar-register {
+          display: block;
+          margin: 0 auto;
+        }
+        label {
+          text-align: center;
+          display: block;
+          margin-top: 10px;
+        }
+        input {
+          margin: 0 auto;
+          padding-bottom: 20px;
+        }
+      }
+      .form-register {
+        border: none;
+        border-radius: initial;
+        margin-bottom: 20px;
+        font-family: "Source sans pro";
+      }
+      select {
+        display: block;
+        margin: 0 auto;
+        height: 35px;
+        width: 150px;
+        font-family: Source sans Pro;
+        border-radius: 0;
+        font-size: 12px;
+        text-align: center;
+      }
+      .submit {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 40px;
+        background: orange;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+      }
+      .to_login {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: grey;
+      }
     }
   }
-}

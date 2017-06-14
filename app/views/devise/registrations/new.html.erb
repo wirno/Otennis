@@ -3,68 +3,72 @@
 <div class="register-wrapper">
   <div class="page-content">
     <h2>Inscription</h2>
-
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
-
         <div class="row">
-          <div class="col-md-4">
-            <div class="field-register">
-              <%= f.text_field :nom, class: 'form-control', placeholder: 'Nom' %>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <%= f.text_field :prenom, class: 'form-control', placeholder: 'Prénom' %>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-              <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Mot de passe' %>
-              <% if @validatable %>
-                  <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
+          <div class="col-md-12">
+            <div class="avatar-container">
+              <% if f.object.avatar.present? %>
+                  <%= image_tag(f.object.avatar, size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail avatar-register', id: "img_preview") %>
+              <% else %>
+                  <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail avatar-register', id: "img_preview") %>
               <% end %>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmation du mot de passe' %>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="form-group">
-              <%= f.date_field :age, class: 'form-control', placeholder: 'date de naissance' %>
+              <%= f.label :Importer_votre_avatar_ici %>
+              <%= f.file_field :avatar, id: "avatar-upload" %>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="field-register">
-              <%= f.text_field :ville, class: 'form-control', placeholder: 'Ville' %>
-            </div>
+            <%= f.text_field :nom, class: 'form-control form-register', placeholder: 'Nom' %>
           </div>
           <div class="col-md-4">
-            <div class="form-group">
-              <%= f.text_field :cp, class: 'form-control', placeholder: 'code postal' %>
-            </div>
+            <%= f.text_field :prenom, class: 'form-control form-register', placeholder: 'Prénom' %>
           </div>
           <div class="col-md-4">
+            <%= f.date_field :age, class: 'form-control form-register', placeholder: 'Age' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <%= f.text_field :cp, class: 'form-control form-register', placeholder: 'Code postal' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :ville, class: 'form-control form-register', placeholder: 'Ville' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.select :tennislevel, ['Novice', 'Debutant', 'Experimenté', 'expert', 'pro'] %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :anneetennis, class: 'form-control', placeholder: 'Années de tennis' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.email_field :email, class: 'form-control form-register', placeholder: 'Email' %>
+          </div>
+          <div class="col-md-4">
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Mot de passe' %>
+            <% if @validatable %>
+                <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmation du mot de passe' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <div class="form-group">
               <%= f.radio_button :genre, 'Homme', :checked => true %> <%= label :genre_homme, 'Homme' %>
               <%= f.radio_button :genre, 'Femme' %> <%= label :genre_femme, 'Femme' %>
             </div>
           </div>
         </div>
-        <%= f.submit "Sign up", class: 'btn btn-primary' %>
+        <%= f.submit "Inscription", class: 'submit' %>
     <% end %>
+    <%- if controller_name != 'sessions' %>
+        <%= link_to "Déjà un compte ? Connectez vous", new_session_path(resource_name), class: 'to_login' %><br />
+    <% end -%>
   </div>
 </div>
-<%= render "devise/shared/links" %>

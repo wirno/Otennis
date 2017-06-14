@@ -52,9 +52,8 @@
       <%= image_tag(f.object.avatar, size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail', id:"img_preview") %>
   <% else %>
       <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail', id:"img_preview") %>
-
   <% end %>
-    <%= f.label :Importer_votre_avatar_ici %>
+    <%= f.label :Importer_votre_avatar_ici%>
     <%= f.file_field :avatar, id: "avatar-upload" %>
   </div>
 
