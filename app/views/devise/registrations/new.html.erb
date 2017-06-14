@@ -3,10 +3,8 @@
 <div class="register-wrapper">
   <div class="page-content">
     <h2>Inscription</h2>
-
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
-
         <div class="row">
           <div class="col-md-12">
             <div class="avatar-container">
@@ -59,9 +57,18 @@
             <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmation du mot de passe' %>
           </div>
         </div>
-
-        <%= f.submit "Sign up", class: 'btn btn-primary' %>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.radio_button :genre, 'Homme', :checked => true %> <%= label :genre_homme, 'Homme' %>
+              <%= f.radio_button :genre, 'Femme' %> <%= label :genre_femme, 'Femme' %>
+            </div>
+          </div>
+        </div>
+        <%= f.submit "Inscription", class: 'submit' %>
     <% end %>
+    <%- if controller_name != 'sessions' %>
+        <%= link_to "Déjà un compte ? Connectez vous", new_session_path(resource_name), class: 'to_login' %><br />
+    <% end -%>
   </div>
 </div>
-<%= render "devise/shared/links" %>

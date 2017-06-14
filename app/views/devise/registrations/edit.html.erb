@@ -22,6 +22,12 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :genre %>
+    <%= f.radio_button :genre, 'Homme', :checked => true %> <%= label :genre_homme, 'Homme' %>
+    <%= f.radio_button :genre, 'Femme' %> <%= label :genre_femme, 'Femme' %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :cp %>
     <%= f.text_field :cp, class: 'form-control' %>
   </div>
@@ -31,7 +37,7 @@
     <%= f.text_field :ville, class: 'form-control' %>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :niveau_de_tennis %>
     <%= f.select :tennislevel, ['Novice', 'Debutant', 'Experimenté', 'expert', 'pro']%>
   </div>
