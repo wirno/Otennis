@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
-	def discover	
-  end
+
+	def discover
+	end
 end
