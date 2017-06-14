@@ -171,4 +171,8 @@ class UsersController < ApplicationController
 	def filters_params
 		params.require(:filters).permit(:radius, :ville, :sexe, :age1, :age2, :niveau)
 	end
+
+	def redirsettings
+		redirect_to matchmaking_settings_path
+	end
 end

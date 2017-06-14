@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 	
 	get 'matchmaking/settings', to: 'users#settings'
 	post 'matchmaking/parameters', to: 'users#parameters'
+	get 'matchmaking/parameters', to: 'users#redirsettings'
 
 end
