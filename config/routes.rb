@@ -26,5 +26,12 @@ Rails.application.routes.draw do
 	post 'clubs.search', to: 'clubs#search'
 
 	post 'clubs/profile/create/terrains', to: 'clubs#createterrains'
+	
+	resources :events
 
+	get 'clubs/terrains/events', to: 'events#calendar', as: 'clubs_terrains_events'
+
+	post 'events/create', to: 'events#create'
+
+	get 'terrains/profile/:id', to: 'terrains#show', as: 'terrains_find_profile'
 end

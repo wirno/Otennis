@@ -1,5 +1,6 @@
 class Terrain < ApplicationRecord
 	belongs_to :club
+    has_many :events
 
 	include AlgoliaSearch
   	algoliasearch auto_index: true, auto_remove: true do

@@ -1,9 +1,22 @@
 <%= render "partial/navbar" %>
 
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+<h1>Clubs#profile</h1>
+<p>Find me in app/views/clubs/profile.html.erb</p>
 <div><%= @club.nom %></div>
 <div><%= @club.cp %></div>
 <div><%= @club.ville %></div>
 <div><%= @club.adresse %></div>
 <div><%= @club.description %></div>
+
+<% if(@terrains) %>
+	<% @terrains.each do |terrain| %>
+		<div>nom du terrain : <%= terrain.nom %></div>
+		<div>surface du terrain : <%= terrain.surface %></div>
+		<div>description du terrain : <%= terrain.description %></div>
+		<div>nom du club : <%= terrain.club.nom %></div>
+		<div>ville du club : <%= terrain.club.ville %></div>
+		<div>code postal du club : <%= terrain.club.cp %></div>
+		<div>adresse du club : <%= terrain.club.adresse %></div>
+		<div>=========================</div>
+	<% end %>
+<% end %>

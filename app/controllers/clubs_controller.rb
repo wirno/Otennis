@@ -5,7 +5,12 @@ class ClubsController < ApplicationController
 	end
 
 	def show
-		@club = Club.find_by_id(params[:id])
+		if(Club.find_by_id(params[:id]))
+			@club = Club.find_by_id(params[:id])
+			@terrains = @club.terrains
+		else
+			redirect_to root_path, notice: 'Ce club n\'existe pas'
+		end
 	end
 
 	def createterrains

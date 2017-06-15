@@ -48,6 +48,10 @@ gem "algoliasearch-rails"
 
 gem 'httparty'
 
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem 'faker'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
