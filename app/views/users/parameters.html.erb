@@ -39,7 +39,7 @@
 
   <div class="col-md-4">
   	<div class="thumbnail">
-    <%= link_to find_profile_path(user) do %>
+    <%= link_to users_find_profile_path(user) do %>
     <% if user.avatar.present? %>
     	<%= image_tag(user.avatar, alt: 'Your upload jacket', style: "width:100%") %>
   	<% else %>

@@ -1,5 +1,7 @@
 require 'httparty'
 class UsersController < ApplicationController
+	before_action :authenticate_user!
+
 	def matchmaking 
 	  	if user_signed_in?
 	  		@currentUser = current_user
@@ -47,7 +49,13 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find_by_id(params[:id])
+		if(User.find_by_id(params[:id]))
+			@user = User.find_by_id(params[:id])
+			session[:search_user_id] = @user.id
+		else
+			redirect_to root_path, notice: 'Cet utilisateur n\'existe pas'
+		end
+
 	end
 
 	def settings

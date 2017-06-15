@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+  has_many :events
 
 	include AlgoliaSearch
   	algoliasearch auto_index: true, auto_remove: true do
