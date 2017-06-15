@@ -3,6 +3,7 @@ class AddUserInformation < ActiveRecord::Migration[5.1]
   	add_column :users, :nom, :string
   	add_column :users, :prenom, :string
   	add_column :users, :age, :date
+    add_column :users, :pseudo, :string
     add_column :users, :genre, :string
   	add_column :users, :cp, :string
   	add_column :users, :ville, :string
