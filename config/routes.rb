@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 	get 'clubs/profile/:id', to: 'clubs#show', as:'clubs_find_profile'
 
 	get 'clubs/search/settings', to: 'clubs#settings'
-	post 'clubs.search', to: 'clubs#search'
+	post 'clubs/search', to: 'clubs#search'
 
 	post 'clubs/profile/create/terrains', to: 'clubs#createterrains'
 	

@@ -36,6 +36,14 @@ class EventsController < ApplicationController
   end
 
   def calendar
+    if(!session[:search_user_id])
+      redirect_to root_path, notice: 'vous devez au préalable choisir un adversaire'
+    elsif (!session[:search_terrain_id])
+      redirect_to root_path, notice: 'Vous devez au préable choisir un club'
+    else
+      puts session[:search_user_id]
+      puts session[:search_terrain_id]
+    end
   end
 
   def set_event

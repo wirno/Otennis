@@ -8,15 +8,25 @@
 <div><%= @club.adresse %></div>
 <div><%= @club.description %></div>
 
+<div class="row">
+
 <% if(@terrains) %>
 	<% @terrains.each do |terrain| %>
-		<div>nom du terrain : <%= terrain.nom %></div>
-		<div>surface du terrain : <%= terrain.surface %></div>
-		<div>description du terrain : <%= terrain.description %></div>
-		<div>nom du club : <%= terrain.club.nom %></div>
-		<div>ville du club : <%= terrain.club.ville %></div>
-		<div>code postal du club : <%= terrain.club.cp %></div>
-		<div>adresse du club : <%= terrain.club.adresse %></div>
-		<div>=========================</div>
+	<div class="col-md-4">
+	  	<div class="thumbnail">
+	  		<%= link_to terrains_find_profile_path(terrain) do %>
+	  			<div class="caption">
+					<div>nom du terrain : <%= terrain.nom %></div>
+					<div>surface du terrain : <%= terrain.surface %></div>
+					<div>description du terrain : <%= terrain.description %></div>
+					<div>nom du club : <%= terrain.club.nom %></div>
+					<div>ville du club : <%= terrain.club.ville %></div>
+					<div>code postal du club : <%= terrain.club.cp %></div>
+					<div>adresse du club : <%= terrain.club.adresse %></div>
+				</div>
+			<% end %>
+		</div>
+	</div>
 	<% end %>
 <% end %>
+</div>
