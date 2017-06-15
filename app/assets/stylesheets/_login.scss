@@ -1,101 +1,68 @@
-html,body {
+.page-login-wrapper {
+  background: url(tennis.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100%;
-
-}
-
-.login{
-    height: 100%;
-    width: auto;
-    background-image:url("images/../tennis.jpg");
-    background-size: 100%;
-    padding-top:20%;
-
-    h2{
-      margin-top:0;
-    }
-
-}
-
-
-
-.form-wrapper {
- // position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  
-
-
-
   .form-container {
-      padding-top:5%;
-      background-color: rgba(255, 255, 255, 0.6);
-      background: rgba(255, 255, 255, 0.6);
-      color: rgba(255, 255, 255, 0.6);
-
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: rgba(255, 255, 255, 0.6);
     h2 {
-      color: #F6A623;
-      font-size: 3em;
       text-align: center;
+      font-family: Source sans Pro;
+      color: #F6A623;
+      margin-bottom: 20px;
     }
-    .fields-container {
+    form {
+      display: block;
+      width: 50%;
       margin: 0 auto;
-      width: 10%;
-      .field-login {
-        width: 50px;
-        height: 50px;
+    }
+    .login_field {
+      display: block;
+      border: none;
+      border-radius: 2px;
+      height: 30px;
+      width: 250px;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    .login-submit {
+      height: 30px;
+      margin: 0 auto;
+      width: 150px;
+      display: block;
+      background: orange;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-family: Source sans Pro;
+      margin-bottom: 20px;
+    }
+
+    .forgot {
+      text-align: center;
+      display: block;
+      padding-left: 50px;
+      font-size: 11px;
+      color: grey;
+    }
+    .sign_up {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background: grey;
+      margin-bottom: 0;
+      position: fixed;
+      width: 100%;
+      &:hover {
+        color: orange;
       }
     }
   }
-  &:before {
-    content: "";
-   // position: fixed;
-    left: 0;
-    right: 0;
-    z-index: -1;
-
-    display: block;
-    background-image:url("images/../banner-3.jpg");
-    width: 100%;
-
-  }
-
-  input[type=submit] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    background:#fd9232;
-    border: none;
 }
-
-input[type=submit]:hover {
-    -webkit-appearance: button;
-    cursor: pointer;
-    background:white;
-    border: none;
-    color:#fd9232;
-}
-
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    width: 200px;
-    height: 50px;
-    outline: none;
-    box-shadow: none;
-    color: white;
-    padding-left: 0px;
-    -webkit-appearance:none 
-
-
-    }
-
-
-
-
-form#new_user.new_user{
-  margin-left: -110px;
-}
-}
-

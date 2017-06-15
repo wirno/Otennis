@@ -14,4 +14,9 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.min
+//= require bootstrap-sprockets
+//= require moment
+//= require fullcalendar
+//= require daterangepicker
 //= require_tree .

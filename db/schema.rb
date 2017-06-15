@@ -10,7 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608121927) do
+ActiveRecord::Schema.define(version: 20170615131948) do
+
+  create_table "clubs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "nom"
+    t.string "ville"
+    t.string "cp"
+    t.string "adresse"
+    t.string "description"
+    t.index ["email"], name: "index_clubs_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_clubs_on_reset_password_token", unique: true
+  end
+
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "color"
+    t.integer "current"
+    t.integer "user_id"
+    t.integer "terrain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "terrains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "nom"
+    t.string "description"
+    t.string "surface"
+    t.integer "club_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -28,6 +71,7 @@ ActiveRecord::Schema.define(version: 20170608121927) do
     t.string "nom"
     t.string "prenom"
     t.date "age"
+    t.string "pseudo"
     t.string "genre"
     t.string "cp"
     t.string "ville"
