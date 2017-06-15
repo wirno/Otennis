@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
 	def discover
-  end
-
+	end
+  
   def search
   end
 end
