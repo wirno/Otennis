@@ -34,4 +34,5 @@ Rails.application.routes.draw do
 	post 'events/create', to: 'events#create'
 
 	get 'terrains/profile/:id', to: 'terrains#show', as: 'terrains_find_profile'
+end
 

@@ -1,32 +1,61 @@
-<%= render "partial/navbar" %>
-
-<h1>Clubs#profile</h1>
-<p>Find me in app/views/clubs/profile.html.erb</p>
-<div><%= @club.nom %></div>
-<div><%= @club.cp %></div>
-<div><%= @club.ville %></div>
-<div><%= @club.adresse %></div>
-<div><%= @club.description %></div>
-
-<div class="row">
-
-<% if(@terrains) %>
-	<% @terrains.each do |terrain| %>
-	<div class="col-md-4">
-	  	<div class="thumbnail">
-	  		<%= link_to terrains_find_profile_path(terrain) do %>
-	  			<div class="caption">
-					<div>nom du terrain : <%= terrain.nom %></div>
-					<div>surface du terrain : <%= terrain.surface %></div>
-					<div>description du terrain : <%= terrain.description %></div>
-					<div>nom du club : <%= terrain.club.nom %></div>
-					<div>ville du club : <%= terrain.club.ville %></div>
-					<div>code postal du club : <%= terrain.club.cp %></div>
-					<div>adresse du club : <%= terrain.club.adresse %></div>
-				</div>
-			<% end %>
-		</div>
-	</div>
-	<% end %>
-<% end %>
+<%= render 'partial/navbar' %>
+<div class="row topprofil">
+   <div class="col-md-6 col-md-offset-3 topprofil">
+      <div class="row">
+         <div class="col-md-4">
+            <div><%= @club.nom %></div>
+            <div><%= @club.description %></div>
+            <br>
+         </div>
+         <div class="col-md-4 img_milieu">
+            <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket' ,:class => "img_profil") %>
+         </div>
+         <div class="col-md-4">
+            <div><%= @club.adresse %></div>
+            <div><%= @club.cp %></div>
+            <div><%= @club.ville %></div>
+         </div>
+      </div>
+   </div>
 </div>
+<hr>
+<div class="row tabsprofil">
+   <div id="tabs" class="col-md-12 ">
+      <ul class="nav nav-tabs col-md-offset-2">
+         <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
+         <li><a data-toggle="tab" href="#menu1">Terrains</a></li>
+      </ul>
+      <div class="tab-content">
+         <div id="home" class="tab-pane fade in active">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <div id="menu1" class="tab-pane fade">
+            <div class="row">
+               <div class="col-md-6 col-md-offset-2">
+                  <div class="row">
+                  <% @terrains.each do |terrain| %>
+                     <div class="col-sm-4">
+                        <div class="row">
+                           <div class="col-sm-3"><%= image_tag("jacket-default", :class => "img_reseau ") %>
+                            <%= link_to 'Consulter', terrains_find_profile_path(terrain) %>
+                           </div>
+                           <div class="col-sm9 description_reseau">
+                              <p class="namelink"><%= terrain.nom %><br><span class="pseudolink"><%= terrain.surface %></span></p>
+                           </div>
+                        </div>
+                     </div>
+                     <% end %>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+
+   </div>
+</div>
+<%= render 'partial/footer' %>

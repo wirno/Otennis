@@ -1,38 +1,50 @@
-<%= render "partial/navbar" %>
+<%= render 'partial/navbar' %>
 
-<h1>Clubs#settings</h1>
-<p>Find me in app/views/clubs/settings.html.erb</p>
-
-<%= form_for(:filters, :url => clubs_search_path, :html => {:class => 'form'}) do |f| %>
-  	<div class="form-group">
-	    <%= f.label :nom %>
-	    <%= f.text_field :nom, class: 'form-control' %>
-	</div>
-
-  	<div class="form-group">
-	    <%= f.label :ville %>
-	    <%= f.text_field :ville, class: 'form-control' %>
-	</div>
-
-	<div class="form-group">
-	    <%= f.label :rayon %>
-	    <%= f.select :radius, [['10 KM','10'], ['20 KM','20'], ['30 KM','30']]%>
-	</div>
-
-    <%= f.submit "rechercher", class: 'btn btn-primary' %>
-<% end %>
-<div class="row">
-<% @clubs.each do |club| %>
-  <div class="col-md-4">
-  	<div class="thumbnail">
-    <%= link_to clubs_find_profile_path(club) do %>
-        <div class="caption">
-          <p><%= club.nom %></p>
-          <p><%= club.ville %> - <%= club.cp %> - <%= club.adresse %></p>
-          <p><%= club.description %></p>
+<div class="page-wrapper" style="height:100%">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <%= form_for(:filters, :url => clubs_search_path, :html => {:class => 'form'}) do |f| %>
+        <h6 class="title">Où ?</h6>
+        <div class="sidebar-line"></div>
+        <li>
+          <%= f.label :ville %>
+          <%= f.text_field :ville, class: 'city', placeholder: 'Ville' %>
+        </li>
+        <li>
+          <%= f.label :rayon %>
+          <%= f.select :radius, [['10 KM','10'], ['20 KM','20'], ['30 KM','30']]%>
+        </li>
+        <h6 class="title">Caractéristiques</h6>
+        <div class="sidebar-line"></div>
+        <li>
+          <%= f.label :nom_du_club %>
+          <%= f.text_field :nom, class: 'city' %>
+        </li>
+        <li>
+          <%= f.submit "rechercher", class: 'btn btn-primary' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+      <% @clubs.each do |club| %>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <div class="search-profile">
+            <div class="col-md-6 col-sm-12">
+              <%= image_tag('jacket-default', alt: 'Your upload jacket') %>
+              <%= link_to 'Consulter', clubs_find_profile_path(club) %>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h1><%= club.nom %> 
+              <h2><%= club.ville %> <%= club.cp %></h2>
+              <span><%= club.description %> </span>
+            </div>
+          </div>
         </div>
-    <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
-<% end %>
 </div>

@@ -7,10 +7,6 @@
             <div><%= @user.prenom %></div>
             <div><%= @user.age %></div>
             <div><%= @user.email %></div>
-            <div><%= @user.cp %></div>
-            <div><%= @user.ville %></div>
-            <div><%= @user.tennislevel %></div>
-            <div><%= @user.anneetennis %></div>
             <br>
             <%= link_to 'modifier profil', edit_user_registration_path %>
          </div>
@@ -23,13 +19,9 @@
             <br><br>
             <p class="name"> <%= @user.nom %> <%= @user.prenom %>
             <p>
-            <p>@<%= @user.prenom %></p>
+            <p>@<%= @user.pseudo %></p>
          </div>
          <div class="col-md-4">
-            <div><%= @user.nom %></div>
-            <div><%= @user.prenom %></div>
-            <div><%= @user.age %></div>
-            <div><%= @user.email %></div>
             <div><%= @user.cp %></div>
             <div><%= @user.ville %></div>
             <div><%= @user.tennislevel %></div>

@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	  		@currentUser = current_user
 	  		city = @currentUser.ville
 	  		gender = @currentUser.genre
+
 	  		responseCityLatLong = HTTParty.get("http://maps.googleapis.com/maps/api/geocode/json?address={" + city + "},{FR}", :verify => false)
 	  		latitude = responseCityLatLong['results'][0]['geometry']['location']['lat']
 	  		longitude = responseCityLatLong['results'][0]['geometry']['location']['lng']

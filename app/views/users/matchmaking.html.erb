@@ -1,25 +1,33 @@
-<%= render "partial/navbar" %>
+<%= render 'partial/navbar' %>
 
-<h1>Users#matchmaking</h1>
-<p>Find me in app/views/users/matchmaking.html.erb</p>
+<div class="page-wrapper" style="height:100%">
+  <div class="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+      <% @users.each do |user| %>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <div class="search-profile">
+            <div class="col-md-6 col-sm-12">
+                <% if user.avatar.present? %>
+                  <%= image_tag(user.avatar, alt: 'Your upload jacket', style: "width:100%") %>
+                <% else %>
+                  <%= image_tag('jacket-default', alt: 'Your upload jacket') %>
+                <% end %>
+              <%= link_to 'Consulter', users_find_profile_path(user) %>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h1><%= user.nom %> <%= user.prenom %></h1>
+              <h2>@<%= user.pseudo %></h2>
 
-<div class="row">
-<% @users.each do |user| %>
-
-  <div class="col-md-4">
-  	<div class="thumbnail">
-    <%= link_to users_find_profile_path(user) do %>
-    <% if user.avatar.present? %>
-    	<%= image_tag(user.avatar, alt: 'Your upload jacket', style: "width:100%") %>
-  	<% else %>
-    	<%= image_tag('jacket-default', alt: 'Your upload jacket') %>
-    <% end %>
-        <div class="caption">
-          <p><%= user.nom %> <%= user.prenom %></p>
-          <p><%= user.genre %> - <%= user.ville %> - <%= user.cp %></p>
+              <span><%= user.genre %></span>
+              <span><%= user.calcAge %> ans</span>
+              <span><%= user.ville %> <%= user.cp %></span>
+              <span><%= user.tennislevel %></span>
+            </div>
+          </div>
         </div>
-    <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
-<% end %>
 </div>

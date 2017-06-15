@@ -1,7 +1,285 @@
-<%= render "partial/navbar" %>
+<%= render 'partial/navbar' %>
+<div class="row topprofil">
+   <div class="col-md-6 col-md-offset-3 topprofil">
+      <div class="row">
+         <div class="col-md-4">
+            <div><%= @terrain.nom %></div>
+            <div><%= @terrain.surface %></div>
+            <div><%= @terrain.description %></div>
+            <br>
+         </div>
+         <div class="col-md-4 img_milieu">
+            <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket' ,:class => "img_profil") %>
+            <br><br>
+         </div>
+      </div>
+   </div>
+</div>
+<hr>
+<div class="row tabsprofil">
+   <div id="tabs" class="col-md-12 ">
+      <ul class="nav nav-tabs col-md-offset-2">
+         <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
+         <li><a data-toggle="tab" href="#menu1">Réseau</a></li>
+         <li><a data-toggle="tab" href="#menu2">Distinction</a></li>
+         <li><a data-toggle="tab" href="#menu3">Historique</a></li>
+         <li><a data-toggle="tab" href="#menu4">Planning</a></li>
+         <li><a data-toggle="tab" href="#menu5">Notation</a></li>
+      </ul>
+      <div class="tab-content">
+         <div id="home" class="tab-pane fade in active">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <div id="menu1" class="tab-pane fade">
+            <div class="row">
+               <div class="col-md-6 col-md-offset-2">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="row">
+                           <div class="col-sm-3"><%= image_tag("profil.jpg", :class => "img_reseau ") %>
+                           </div>
+                           <div class="col-sm9 description_reseau">
+                              <p class="namelink">Nom Prenom <br><span class="pseudolink">@Toto</span></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4 ">
+                        <div class="row">
+                           <div class="col-sm-3"><%= image_tag("profil.jpg", :class => "img_reseau ") %>
+                           </div>
+                           <div class="col-sm9 description_reseau">
+                              <p class="namelink">Nom Prenom <br><span class="pseudolink">@Toto</span></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4 ">
+                        <div class="row">
+                           <div class="col-sm-3"><%= image_tag("profil.jpg", :class => "img_reseau ") %>
+                           </div>
+                           <div class="col-sm9 description_reseau">
+                              <p class="namelink">Nom Prenom <br><span class="pseudolink">@Toto</span></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+              
+               <div class="col-md-2 fav">
+                  <div class="col-sm-4 ">
+                     <div class="row">
+                        <div class="col-sm-3"><%= image_tag("profil.jpg", :class => "img_reseau ") %>
+                        </div>
+                        <div class="col-sm9 description_reseau">
+                           <p class="namelink">Nom Prenom <br><span class="pseudolink">@Toto</span></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="menu2" class="tab-pane fade">
+            <div class="row">
+               <div class="col-md-4 ">
+                  <div class="row distinction1">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 ">
+                  <div class="row distinction2">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 ">
+                  <div class="row distinction1">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 ">
+                  <div class="row distinction1">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 ">
+                  <div class="row distinction2">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 ">
+                  <div class="row distinction1">
+                     <div class="col-md-3">
+                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
+                     </div>
+                     <div class="col-md-9">
+                        <h3>Star montant 1</h3>
+                        <p>Remportez votre première victoire</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
 
-<h1>Terrains#show</h1>
-<p>Find me in app/views/terrains/show.html.erb</p>
-<div><%= @terrain.nom %></div>
-<div><%= @terrain.surface %></div>
-<div><%= @terrain.description %></div>
+         <!--  HISTORIQUE  -->
+
+         <div id="menu3" class="tab-pane fade">
+            <div class="row">
+               <div class="col-md-5 col-md-offset-1">
+                  <div class="row historique">
+                     <div class="col-md-3">
+                        <p>27/12/2017</p> 
+                     </div>
+                     <div class="col-md-9">
+                        <p><span class="victoire">VICTOIRE</span> face à <span class="pseudo">@Pseudo </span></p>
+                        <p>Court La Fluère - Paris 12</p>
+                        <p>Notation du match :
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></p>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+               <div class="col-md-5 col-md-offset-1">
+                  <div class="row historique">
+                     <div class="col-md-3">
+                        <p>27/12/2017</p> 
+                     </div>
+                     <div class="col-md-9">
+                        <p><span class="defaite">VICTOIRE</span> face à <span class="pseudo">@Pseudo </span></p>
+                        <p>Court La Fluère - Paris 12</p>
+                        <p>Notation du match :
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></p>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+
+
+
+
+
+               </div>
+         </div>
+         
+
+
+         <!--  PLANNING  -->
+
+         <div id="menu4" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+         </div>
+         
+
+
+         <!--  NOTATION  -->
+
+
+         <div id="menu5" class="tab-pane fade note">
+
+            <p> NOTE GLOBALE (88%) <br>
+            <%= image_tag("etoile.png", :class => "etoile1 ") %>
+            <%= image_tag("etoile.png", :class => "etoile1 ") %>
+            <%= image_tag("etoile.png", :class => "etoile1 ") %>
+            <%= image_tag("etoile.png", :class => "etoile1 ") %>
+            </p>
+
+
+
+            <div class="row notation">
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+
+            </div>
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></div>
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></div>
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+
+            </div>
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></div>
+
+            <div class="col-md-4 ">Note de coherence avec la description (88%)<br>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %>
+            <%= image_tag("etoile.png", :class => "etoile2 ") %></div>
+
+            </div> 
+
+
+
+
+         </div>
+      </div>
+
+
+
+
+
+
+   </div>
+</div>
+<%= render 'partial/footer' %>
