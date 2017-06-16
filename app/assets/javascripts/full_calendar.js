@@ -13,6 +13,7 @@ initialize_calendar = function() {
       editable: true,
       eventLimit: true,
       events: '/events.json',
+      defaultView: 'agendaWeek',
 
       select: function(start, end) {
         $.getScript('/events/new', function() {

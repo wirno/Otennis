@@ -8,6 +8,7 @@
             <div><%= @user.age %></div>
             <div><%= @user.email %></div>
             <br>
+            <%= link_to 'défier', clubs_search_settings_path %>
          </div>
          <div class="col-md-4 img_milieu">
             <% if @user.avatar.present? %>
@@ -19,6 +20,7 @@
             <p class="name"> <%= @user.nom %> <%= @user.prenom %>
             <p>
             <p>@<%= @user.pseudo %></p>
+
          </div>
          <div class="col-md-4">
             <div><%= @user.cp %></div>

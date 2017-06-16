@@ -35,10 +35,7 @@
    <div id="tabs" class="col-md-12 ">
       <ul class="nav nav-tabs col-md-offset-2">
          <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
-         <li><a data-toggle="tab" href="#menu1">Réseau</a></li>
-         <li><a data-toggle="tab" href="#menu2">Distinction</a></li>
-         <li><a data-toggle="tab" href="#menu3">Historique</a></li>
-         <li><a data-toggle="tab" href="#menu4">Planning</a></li>
+         <li><a data-toggle="tab" href="#menu3">Match</a></li>
          <li><a data-toggle="tab" href="#menu5">Notation</a></li>
       </ul>
       <div class="tab-content">
@@ -168,52 +165,22 @@
 
          <div id="menu3" class="tab-pane fade">
             <div class="row">
+            <% @events.each do |event| %>
                <div class="col-md-5 col-md-offset-1">
                   <div class="row historique">
                      <div class="col-md-3">
-                        <p>27/12/2017</p> 
                      </div>
                      <div class="col-md-9">
-                        <p><span class="victoire">VICTOIRE</span> face à <span class="pseudo">@Pseudo </span></p>
-                        <p>Court La Fluère - Paris 12</p>
-                        <p>Notation du match :
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %></p>
+                        <p>le <%= event.start.strftime("%F") %> face à <span class="pseudo"><%= event.user.pseudo %></span></p>
+                        <p>à <%= event.start.strftime("%T") %></p>
+                        <p>nom du terrain : <%= event.terrain.nom %></p>
+                        <p>adresse : <%= event.terrain.club.ville %> - <%= event.terrain.club.cp %> - <%= event.terrain.club.adresse %></p>
+                        <p>titre de l'event : <%= event.title %></p>
                      </div>
                   </div>
                </div>
-
-
-
-
-               <div class="col-md-5 col-md-offset-1">
-                  <div class="row historique">
-                     <div class="col-md-3">
-                        <p>27/12/2017</p> 
-                     </div>
-                     <div class="col-md-9">
-                        <p><span class="defaite">VICTOIRE</span> face à <span class="pseudo">@Pseudo </span></p>
-                        <p>Court La Fluère - Paris 12</p>
-                        <p>Notation du match :
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %>
-            <%= image_tag("etoile.png", :class => "etoile2 ") %></p>
-                     </div>
-                  </div>
-               </div>
-
-
-
-
-
-
-
-
-
-               </div>
+               <% end %>
+            </div>
          </div>
          
 

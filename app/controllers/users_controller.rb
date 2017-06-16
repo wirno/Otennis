@@ -47,6 +47,8 @@ class UsersController < ApplicationController
 
 	def profile
 		@user = current_user
+		@events = Event.where(current: @user.id)
+		puts @events
 	end
 
 	def show
