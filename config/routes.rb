@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
 	get '/discover' => 'static#discover'
   	get '/search' => 'static#search'
+  	get '/choice/connection' => 'static#connection'
+  	get '/choice/inscription' => 'static#inscription'
 
 	get 'indexer/index'
   	get 'indexer/reindex'

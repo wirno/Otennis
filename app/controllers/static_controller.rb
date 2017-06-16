@@ -4,4 +4,10 @@ class StaticController < ApplicationController
   
 	def search
   	end
+
+  	def connection
+  	end
+
+  	def inscription
+  	end
 end

@@ -1,0 +1,29 @@
+<%= render 'partial/navbar' %>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="divone">
+          <h1>Choisissez votre type de recherche</h1>
+          <h3>Que recherchez vous dans notre base de données</h3>
+          <p>
+            <%# <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+            <%= link_to 'connection utilisateur', new_user_session_path, class: 'btn btn-primary btn-lg' %>
+            <%= link_to 'connection club', new_club_session_path, class: 'btn btn-primary btn-lg' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="presentation trapese">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= render 'partial/footer' %>
