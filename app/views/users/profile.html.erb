@@ -35,7 +35,8 @@
    <div id="tabs" class="col-md-12 ">
       <ul class="nav nav-tabs col-md-offset-2">
          <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
-         <li><a data-toggle="tab" href="#menu3">Match</a></li>
+         <li><a data-toggle="tab" href="#menu2">Historique</a></li>
+         <li><a data-toggle="tab" href="#menu3">Match à venir</a></li>
          <li><a data-toggle="tab" href="#menu5">Notation</a></li>
       </ul>
       <div class="tab-content">
@@ -90,80 +91,8 @@
                </div>
             </div>
          </div>
+
          <div id="menu2" class="tab-pane fade">
-            <div class="row">
-               <div class="col-md-4 ">
-                  <div class="row distinction1">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="row distinction2">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="row distinction1">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="row distinction1">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="row distinction2">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="row distinction1">
-                     <div class="col-md-3">
-                        <%= image_tag("4450.png", :class => "img_distinction ") %> 
-                     </div>
-                     <div class="col-md-9">
-                        <h3>Star montant 1</h3>
-                        <p>Remportez votre première victoire</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <!--  HISTORIQUE  -->
-
-         <div id="menu3" class="tab-pane fade">
             <div class="row">
             <% @events.each do |event| %>
                <div class="col-md-5 col-md-offset-1">
@@ -179,6 +108,29 @@
                      </div>
                   </div>
                </div>
+               <% end %>
+            </div>
+         </div>
+         <!--  HISTORIQUE  -->
+
+         <div id="menu3" class="tab-pane fade">
+            <div class="row">
+            <% @events.each do |event| %>
+               <% if(event.start.future?) %>
+               <div class="col-md-5 col-md-offset-1">
+                  <div class="row historique">
+                     <div class="col-md-3">
+                     </div>
+                     <div class="col-md-9">
+                        <p>le <%= event.start.strftime("%F") %> face à <span class="pseudo"><%= event.user.pseudo %></span></p>
+                        <p>à <%= event.start.strftime("%T") %></p>
+                        <p>nom du terrain : <%= event.terrain.nom %></p>
+                        <p>adresse : <%= event.terrain.club.ville %> - <%= event.terrain.club.cp %> - <%= event.terrain.club.adresse %></p>
+                        <p>titre de l'event : <%= event.title %></p>
+                     </div>
+                  </div>
+               </div>
+               <% end %>
                <% end %>
             </div>
          </div>
