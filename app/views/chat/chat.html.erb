@@ -1,0 +1,95 @@
+<%= render 'partial/navbar' %>
+
+<div class="chat-wrapper">
+  <div class="title">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Maxime D.</p>
+          <span>@Maxd.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="search"><input type="text" placeholder="Rechercher un contact"></li>
+      <li class="contact">
+        <a href="#" class="active">
+          <div class="image-container">
+            <%= image_tag('profil.jpg') %>
+          </div>
+          <div class="profile">
+            <span class="name">Maxime D.</span>
+            <span class="pseudo">@Max201</span>
+            <span>Vous: <span>Ok nickel !</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="contact">
+        <a href="#">
+          <div class="image-container">
+            <%= image_tag('profil.jpg') %>
+          </div>
+          <div class="profile">
+            <span class="name">Maxime D.</span>
+            <span class="pseudo">@Max201</span>
+            <span>Vous: <span>Ok nickel !</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="contact">
+        <a href="#">
+          <div class="image-container">
+            <%= image_tag('profil.jpg') %>
+          </div>
+          <div class="profile">
+            <span class="name">Maxime D.</span>
+            <span class="pseudo">@Max201</span>
+            <span>Vous: <span>Ok nickel !</span></span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content-wrapper">
+    <div class="messenger-container">
+      <div class="message-partner">
+        <div class="row">
+          <div class="col-md-1">
+            <%= image_tag('profil.jpg') %>
+          </div>
+          <div class="col-md-5">
+            <p>Salut Franck ça va ? Prêt à faire du tennis ?</p>
+          </div>
+        </div>
+      </div>
+      <div class="message-user">
+        <p class="right">Salut mec ! Cette semaine je ne peux qu'à partir de 15h le vendredi, ça te vas ?</p>
+      </div>
+      <div class="message-partner">
+        <div class="row">
+          <div class="col-md-1">
+            <%= image_tag('profil.jpg') %>
+          </div>
+          <div class="col-md-5">
+            <p>Ok !</p>
+          </div>
+        </div>
+      </div>
+      <div class="message-user">
+        <p class="right">Salut mec ! Cette semaine je ne peux qu'à partir de 15h le vendredi, ça te vas ?</p>
+      </div>
+    </div>
+    <div class="sending-wrapper">
+      <div class="sending-container">
+        <div class="col-md-11">
+          <input type="text" name="sender" placeholder="Envoyer un message"/>
+        </div>
+        <div class="col-md-1">
+          <%= image_tag('plane') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

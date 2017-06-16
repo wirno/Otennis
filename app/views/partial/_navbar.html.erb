@@ -13,6 +13,7 @@
           <li><%= link_to 'Profil', users_profile_path %></li>
           <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'Recherche', search_path %></li>
+          <li><%= link_to 'Messagerie', '/messagerie' %></li>
       <% elsif club_signed_in? %>
           <li><%= link_to 'Profil', clubs_profile_path %></li>
           <li><%= link_to 'Déconnexion', destroy_club_session_path, method: :delete %></li>

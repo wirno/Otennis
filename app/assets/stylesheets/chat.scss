@@ -1,0 +1,145 @@
+.chat-wrapper {
+  padding-left: 0;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  .title {
+    font-family: Source sans Pro;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+    p {
+      font-size: 26px;
+      text-align: center;
+      color: orange;
+      margin: 0;
+      padding-top: 20px;
+    }
+    span {
+      text-align: center;
+      text-align: center;
+      display: block;
+    }
+  }
+  .sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    border-right: 1px solid orange;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    .sidebar-nav {
+      position: absolute;
+      top: 20px;
+      width: 250px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        text-indent: 20px;
+        line-height: 24px;
+        input {
+          width: 80%;
+          border-radius: 2px;
+          border: 0.5px solid grey;
+          padding-left: 5px;
+          font-family: Source sans pro;
+          margin-bottom: 20px;
+        }
+        &.contact {
+          display: block;
+          position: relative;
+          z-index: -1;
+          padding-bottom: 10px;
+          a {
+            width: 100%;
+            display: block;
+            background: transparent;
+            .image-container {
+              width: 35%;
+              float: left;
+              display: inline-block;
+              img {
+                width: 65px;
+                border-radius: 50px;
+              }
+            }
+            .profile {
+              width: 50%;
+              display: inline-block;
+              .name {
+                display: block;
+              }
+              .pseudo {
+                display: block;
+              }
+              .message {
+                font-size: 10px;
+                padding-left: 20px;
+              }
+            }
+            &.active {
+              background: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    margin-left: 250px;
+    margin-top: 50px;
+    .messenger-container {
+      margin-left: 100px;
+      margin-bottom: 30px;
+      .message-partner {
+        margin-bottom: 20px;
+        img {
+          width: 65px;
+          border-radius: 50px;
+        }
+        p {
+          height: auto;
+          background: grey;
+          width: 100%;
+          margin-left: 50px;
+          text-align: center;
+          color: white;
+          padding: 5px;
+        }
+      }
+      .message-user {
+        margin-bottom: 100px;
+        p {
+          float: right;
+          margin-right: 50px;
+          color: white;
+          background: orange;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  .sending-container {
+    input {
+      height: 50px;
+      border: 1px solid grey;
+      width: 70%;
+      position: fixed;
+      bottom: 0;
+      z-index: -1;
+    }
+    img {
+      position: fixed;
+      bottom: 0;
+      width: 35px;
+      margin-bottom: 5px;
+    }
+  }
+}
