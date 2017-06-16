@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 
 	def profile
 		@user = current_user
-		@events = Event.where(current: @user.id)
+		@events = Event.where(current: @user.id).or(Event.where(user_id: @user.id))
 		puts @events
 	end
 
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
 	end
 
 	def settings
-		@users = User.all
+		@users = User.where.not(id: current_user.id)
 	end
 
 	def parameters
