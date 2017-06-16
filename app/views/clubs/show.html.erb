@@ -5,6 +5,7 @@
          <div class="col-md-4">
             <div><%= @club.nom %></div>
             <div><%= @club.description %></div>
+            <div><%= @club.telephone %></div>
             <br>
          </div>
          <div class="col-md-4 img_milieu">
@@ -26,11 +27,13 @@
    <div id="tabs" class="col-md-12 ">
       <ul class="nav nav-tabs col-md-offset-2">
          <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
+         <% if(@terrains.present?) %>
          <li><a data-toggle="tab" href="#menu1">Terrains</a></li>
+         <% end %>
       </ul>
       <div class="tab-content">
          <div id="home" class="tab-pane fade in active">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p><%= @club.description %></p>
          </div>
          <div id="menu1" class="tab-pane fade">
             <div class="row">

@@ -5,6 +5,7 @@
          <div class="col-md-4">
             <div><%= @club.nom %></div>
             <div><%= @club.description %></div>
+            <div><%= @club.telephone %></div>
             <br>
             <p><%= link_to 'modifier profil', edit_club_registration_path %></p>
             <p><%= link_to 'Ajouter des terrains', club_create_terrains_path %></p>
@@ -26,16 +27,19 @@
    </div>
 </div>
 <hr>
+<% if(@club.description.present? || @terrains.present?) %>
 <div class="row tabsprofil">
    <div id="tabs" class="col-md-12 ">
       <ul class="nav nav-tabs col-md-offset-2">
          <li class="active"><a data-toggle="tab" href="#home">Descriptif</a></li>
+         <% if(@terrains.present?) %>
          <li><a data-toggle="tab" href="#menu1">Terrains</a></li>
+         <% end %>
       </ul>
       <div class="tab-content">
          <div id="home" class="tab-pane fade in active">
             <h3><%= link_to 'Modifier', edit_club_registration_path %></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p><%= @club.description %></p>
          </div>
          <div id="menu1" class="tab-pane fade">
             <div class="row">
@@ -64,12 +68,7 @@
             </div>
          </div>
       </div>
-
-
-
-
-
-
    </div>
 </div>
+<% end %>
 <%= render 'partial/footer' %>

@@ -2,6 +2,7 @@ class ClubsController < ApplicationController
 	def profile
 		@club = current_club
 		@terrains = @club.terrains
+		puts @terrains
 	end
 
 	def show

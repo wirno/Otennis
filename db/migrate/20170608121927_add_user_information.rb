@@ -14,5 +14,6 @@ class AddUserInformation < ActiveRecord::Migration[5.1]
   	add_column :users, :victoire, :integer
   	add_column :users, :defaite, :integer
   	add_column :users, :avatar, :string
+    add_column :users, :description, :string
   end
 end
