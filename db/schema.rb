@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20170615131948) do
     t.string "cp"
     t.string "adresse"
     t.string "description"
+    t.string "avatar"
+    t.string "telephone"
     t.index ["email"], name: "index_clubs_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clubs_on_reset_password_token", unique: true
   end
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170615131948) do
     t.string "nom"
     t.string "description"
     t.string "surface"
+    t.string "avatar"
     t.integer "club_id"
   end
 

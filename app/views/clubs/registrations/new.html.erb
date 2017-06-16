@@ -5,6 +5,19 @@
     <h2>Inscription</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
+          <div class="row">
+          <div class="col-md-12">
+            <div class="avatar-container">
+              <% if f.object.avatar.present? %>
+                  <%= image_tag(f.object.avatar, size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail avatar-register', id: "img_preview") %>
+              <% else %>
+                  <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket', class: 'img-thumbnail avatar-register', id: "img_preview") %>
+              <% end %>
+              <%= f.label :Importer_votre_avatar_ici %>
+              <%= f.file_field :avatar, id: "avatar-upload" %>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-3">
             <%= f.text_field :nom, class: 'form-control form-register', placeholder: 'Nom du club' %>

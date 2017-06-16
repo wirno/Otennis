@@ -10,8 +10,12 @@
             <%= link_to 'Faire une réservation', clubs_terrains_events_path %>
          </div>
          <div class="col-md-4 img_milieu">
+            <% if @terrain.avatar.present? %>
+            <%= image_tag(@terrain.avatar, size: '150x150', alt: 'Your upload jacket',:class => "img_profil") %>
+            <% else %>
             <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket' ,:class => "img_profil") %>
-            <br><br>
+            <% end %>   
+         <br><br>
          </div>
       </div>
    </div>

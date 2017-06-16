@@ -8,6 +8,10 @@ class Club < ApplicationRecord
     	customRanking ['asc(nom)']
 	end
 
+  
+  mount_uploader :avatar, AvatarUploader
+  attr_accessor :avatar_cache
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

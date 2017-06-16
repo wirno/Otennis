@@ -12,4 +12,8 @@ class Terrain < ApplicationRecord
     	searchableAttributes ['unordered(nom)', 'unordered(surface)']
     	customRanking ['asc(nom)']
 	end
+
+    
+    mount_uploader :avatar, AvatarUploader
+    attr_accessor :avatar_cache
 end

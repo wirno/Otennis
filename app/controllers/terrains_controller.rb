@@ -7,4 +7,14 @@ class TerrainsController < ApplicationController
 			redirect_to root_path, notice: 'Ce terrain n\'existe pas'
 		end
 	end
+
+	def destroy
+		@terrain = Terrain.find(params[:id])
+		puts @terrain
+		if(@terrain.destroy)
+			redirect_to  clubs_profile_path, notice: 'Le terrain a été supprimé'
+		else
+			redirect_to  clubs_profile_path, notice: 'Le terrain n\'a pas pu être supprimé'
+		end
+  end
 end

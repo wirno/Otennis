@@ -13,6 +13,9 @@ class ClubsController < ApplicationController
 		end
 	end
 
+	def getcreaterrains
+	end
+
 	def createterrains
 		@club = current_club
 		@terrain = Terrain.new(paramterrain_params)
@@ -77,7 +80,7 @@ class ClubsController < ApplicationController
 	end
 
 	def paramterrain_params
-		params.require(:paramterrain).permit(:nom, :description, :surface)
+		params.require(:paramterrain).permit(:nom, :description, :surface, :avatar)
 	end
 
 	def filters_params

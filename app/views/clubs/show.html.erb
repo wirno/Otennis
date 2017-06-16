@@ -8,8 +8,11 @@
             <br>
          </div>
          <div class="col-md-4 img_milieu">
+            <% if @club.avatar.present? %>
+            <%= image_tag(@club.avatar, size: '150x150', alt: 'Your upload jacket',:class => "img_profil") %>
+            <% else %>
             <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket' ,:class => "img_profil") %>
-         </div>
+            <% end %>            </div>
          <div class="col-md-4">
             <div><%= @club.adresse %></div>
             <div><%= @club.cp %></div>
@@ -36,7 +39,12 @@
                   <% @terrains.each do |terrain| %>
                      <div class="col-sm-4">
                         <div class="row">
-                           <div class="col-sm-3"><%= image_tag("jacket-default", :class => "img_reseau ") %>
+                           <div class="col-sm-3">
+                           <% if terrain.avatar.present? %>
+                              <%= image_tag(terrain.avatar, size: '150x150', alt: 'Your upload jacket',:class => "img_reseau") %>
+                              <% else %>
+                              <%= image_tag('jacket-default', size: '150x150', alt: 'Your upload jacket' ,:class => "img_reseau") %>
+                              <% end %>   
                             <%= link_to 'Consulter', terrains_find_profile_path(terrain) %>
                            </div>
                            <div class="col-sm9 description_reseau">
@@ -50,12 +58,6 @@
             </div>
          </div>
       </div>
-
-
-
-
-
-
    </div>
 </div>
 <%= render 'partial/footer' %>

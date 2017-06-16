@@ -5,5 +5,7 @@ class AddClubInformation < ActiveRecord::Migration[5.1]
   	add_column :clubs, :cp, :string
   	add_column :clubs, :adresse, :string
   	add_column :clubs, :description, :string
+  	add_column :clubs, :avatar, :string
+  	add_column :clubs, :telephone, :string
   end
 end

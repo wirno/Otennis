@@ -3,6 +3,7 @@ class AddTerrainInformation < ActiveRecord::Migration[5.1]
   	add_column :terrains, :nom, :string
   	add_column :terrains, :description, :string
   	add_column :terrains, :surface, :string
+  	add_column :terrains, :avatar, :string
 	change_table :terrains do |t|
 		t.integer :club_id
 	end
