@@ -8,7 +8,9 @@
           <h3>Votre partenaire de jeu n'attend que vous</h3>
           <p>
             <%# <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
-            <%= link_to 'CONNEXION', new_user_session_path, class: 'btn btn-primary btn-lg' %>
+            <% if !user_signed_in? %>
+              <%= link_to 'CONNEXION', choice_connection_path, class: 'btn btn-primary btn-lg' %>
+            <% end %>
             <%= link_to "DÉCOUVRIR", "/discover", class: 'btn btn-primary btn-lg' %>
           </p>
         </div>
